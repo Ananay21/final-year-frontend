@@ -7,6 +7,8 @@ import UserPage from './pages/UserPage';
 import AllFlashCards from './pages/AllFlashCards';
 import CreatePost from './pages/CreatePost';
 import FlashCardPage from './pages/FlashCardPage';
+import Login from './pages/login';
+import Signup from './pages/signup';
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
       <Route path='/flashcards' element={<AllFlashCards/>}/>
       <Route path='/flashcards/:id' element={<FlashCardPage/>}/>
       <Route path='/createPost' element={<CreatePost/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
     </Routes>
   )
 }
