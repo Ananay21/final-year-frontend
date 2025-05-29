@@ -8,7 +8,7 @@ import StyleIcon from '@mui/icons-material/Style';
 
 const Header = (props) => {
   const [menu,changeMenu]=useState(false)
-  const linksArray=[{link:"/allposts",route:"All posts",icon:<DynamicFeedIcon/>},{link:"/quiz",route:"Take quiz",icon:<QuizIcon/>},{link:"/flashcards",route:"FlashCards",icon:<StyleIcon/>},{link:"/user",route:"Profile",icon:<AccountCircleIcon/>}]
+  const linksArray=[{link:"/allposts",route:"All posts",icon:<DynamicFeedIcon/>},{link:"/quiz",route:"Take quiz",icon:<QuizIcon/>},{link:"/flashcards",route:"Flash Cards",icon:<StyleIcon/>},{link:"/user",route:"Profile",icon:<AccountCircleIcon/>}]
   
   const handleClick=()=>{
     changeMenu(!menu)

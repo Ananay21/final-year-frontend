@@ -8,7 +8,7 @@ const QuizPost = (props) => {
     }).slice(0,7);
 
     return (
-        <div className='h-[225px] w-[450px] flex flex-col mx-2 mb-3 border-4 border-black p-3 rounded-3xl gap-2 max-sm:w-full max-sm:h-full'>
+        <div className='h-[225px] w-[450px] flex flex-col mx-2 mb-3 border-4 border-black bg-white p-3 rounded-3xl gap-2 max-sm:w-full max-sm:h-full shadow-md shadow-gray-300'>
             <div>
                 <h1 className='font-mono text-3xl font-bold ml-2'>
                     {title}

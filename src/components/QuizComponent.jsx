@@ -81,7 +81,7 @@ const QuizComponent = (props) => {
     <div className={`w-full duration-300 `}>
         <div className='flex mx-3 flex-col max-sm:mx-1'>
             <div className='question'>
-                <p className='text-2xl font-semibold text-center mb-5'>{questionObj[index].question}</p>
+                <p className='text-2xl font-semibold text-center mb-5 text-white'>{questionObj[index].question}</p>
             </div>
             <div className='flex flex-wrap justify-center flex-row gap-3 max-sm:flex-col'>
                 {

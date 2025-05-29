@@ -1,6 +1,9 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuizComponent from '../components/QuizComponent';
+// import quiz1 from "../assets/quiz1.jpg";
+// import quiz2 from "../assets/quiz2.jpg";
+// import quiz3 from "../assets/quiz3.jpg";
 
 const QuizPage = () => {
   const questions=[
@@ -51,11 +54,12 @@ const QuizPage = () => {
   }
 ]
 
-
+  // const options=[quiz1,quiz2,quiz3];
+  //  style={{backgroundImage:options[Math.floor(Math.random()*3)]}}
   return (
     <>
     <Header/>
-    <div className='w-full h-screen mt-25'>
+    <div className='w-full h-screen mt-25 quiz'>
         <div className='h-3/4 rounded-xl flex flex-wrap justify-center items-center mx-10 '>
           <QuizComponent obj={questions}/>
         </div>

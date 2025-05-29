@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
 
-/* html{
-    background-color: #1a1a1a;
-} */
+html{
+    background-image: url("./assets/bg.jpg");
+}
 
