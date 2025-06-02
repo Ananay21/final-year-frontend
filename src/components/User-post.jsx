@@ -31,7 +31,7 @@ const UserPost = (props) => {
   return (
       <div className='flex flex-col h-[225px] w-[450px] border-4 border-black bg-gray-100 rounded-lg p-3 mx-2 my-3 shadow-md shadow-gray-300 max-sm:h-[200px]'>
         <div className='font-extrabold text-3xl pl-3 mb-2 hover:cursor-pointer font-mono flex w-full'>
-            <a href="/allposts/12">{props.title}</a>
+            <a href={`/allposts/${props.id}`}>{props.title}</a>
             <div className='flex items-center w-12 justify-end'>
               <YouTubeIcon htmlColor={htmlColor}/>
 
