@@ -2,9 +2,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuizComponent from '../components/QuizComponent';
 import { useEffect, useState } from 'react';
-// import quiz1 from "../assets/quiz1.jpg";
-// import quiz2 from "../assets/quiz2.jpg";
-// import quiz3 from "../assets/quiz3.jpg";
 
 const QuizPage = () => {
   const [questions,setQuestions]=useState({});
