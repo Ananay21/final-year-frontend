@@ -10,7 +10,7 @@ const AllPosts = () => {
  useEffect(()=>{
   getPosts();
  }
- ,[postsArray]);
+ ,[]);
 
  const getPosts=()=>{
   // axios url to set to postsarray

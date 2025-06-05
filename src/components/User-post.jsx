@@ -29,8 +29,8 @@ const UserPost = (props) => {
   }
 
   return (
-      <div className='flex flex-col h-[225px] w-[450px] border-4 border-black bg-gray-100 rounded-lg p-3 mx-2 my-3 shadow-md shadow-gray-300 max-sm:h-[200px]'>
-        <div className='font-extrabold text-3xl pl-3 mb-2 hover:cursor-pointer font-mono flex w-full'>
+      <div className='flex flex-col h-[225px] w-[450px] border-4 border-black bg-gray-100 rounded-lg p-3 mx-2 my-3 shadow-md shadow-gray-300 max-sm:h-[200px] max-sm:w-[300px] '>
+        <div className='font-extrabold text-2xl pl-3 mb-2 hover:cursor-pointer font-mono flex w-full max-lg:text-xl'>
             <a href={`/allposts/${props.id}`}>{props.title}</a>
             <div className='flex items-center w-12 justify-end'>
               <YouTubeIcon htmlColor={htmlColor}/>
@@ -38,17 +38,17 @@ const UserPost = (props) => {
             </div>
         </div> 
         <hr className='mb-3'/>
-        <div className='flex flex-row pl-3 gap-2 mb-2'>
+        <div className='flex flex-row pl-3 gap-2 mb-2 max-lg:text-sm'>
           <p className='text-sm'>Tags:</p>
           {newTags.map((tag,i)=><div className=' flex rounded-3xl bg-black text-white text-xs px-2 py-1 items-center justify-center max-sm:px-[5px]' key={i}><p className='text-center'>{tag}</p></div>)}
           {
             props.tags.length>3 && <p className='text-sm'>...</p>
           }
         </div>
-        <div className='pl-3 text-lg max-sm:hidden font-normal'>
+        <div className='pl-3 text-lg max-sm:hidden font-normal max-lg:text-sm'>
             <p>{updatedDesc}</p>
         </div>
-        <div className='flex flex-row h-full pl-3 my-2'>
+        <div className='flex flex-row h-full pl-3 my-2 max-lg:text-sm'>
             <div className='flex flex-nowrap'>
               @{props.userName}
             </div>

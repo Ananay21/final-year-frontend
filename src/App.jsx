@@ -9,10 +9,12 @@ import CreatePost from './pages/CreatePost';
 import FlashCardPage from './pages/FlashCardPage';
 import Login from './pages/login';
 import Signup from './pages/signup';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
     <Routes>
+      <Route path='/' element={<HomePage/>}/>
       <Route path='/allposts' element={<AllPosts/>}/>
       <Route path='/allposts/:id' element={<PostPlayer/>}/>
       <Route path='/quiz' element={<AllQuiz/>}/>
