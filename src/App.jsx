@@ -4,9 +4,7 @@ import PostPlayer from './pages/PostPage';
 import AllQuiz from './pages/AllQuiz';
 import QuizPage from './pages/QuizPage';
 import UserPage from './pages/UserPage';
-import AllFlashCards from './pages/AllFlashCards';
 import CreatePost from './pages/CreatePost';
-import FlashCardPage from './pages/FlashCardPage';
 import Login from './pages/login';
 import Signup from './pages/signup';
 import HomePage from './pages/HomePage';
@@ -20,8 +18,6 @@ const App = () => {
       <Route path='/quiz' element={<AllQuiz/>}/>
       <Route path='/quiz/:id' element={<QuizPage/>}/>
       <Route path='/user' element={<UserPage/>}/>
-      <Route path='/flashcards' element={<AllFlashCards/>}/>
-      <Route path='/flashcards/:id' element={<FlashCardPage/>}/>
       <Route path='/createPost' element={<CreatePost/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>

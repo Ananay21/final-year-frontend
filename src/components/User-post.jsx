@@ -29,7 +29,7 @@ const UserPost = (props) => {
   }
 
   return (
-      <div className='flex flex-col h-[225px] w-[450px] border-4 border-black bg-gray-100 rounded-lg p-3 mx-2 my-3 shadow-md shadow-gray-300 max-sm:h-[200px] max-sm:w-[300px] '>
+      <div className='flex flex-col h-[225px] w-[450px] border-4 duration-300 hover:scale-101 border-black bg-gray-100 rounded-lg p-3 mx-2 my-3 shadow-md shadow-gray-300 max-sm:h-[200px] max-sm:w-[300px] '>
         <div className='font-extrabold text-2xl pl-3 mb-2 hover:cursor-pointer font-mono flex w-full max-lg:text-xl'>
             <a href={`/allposts/${props.id}`}>{props.title}</a>
             <div className='flex items-center w-12 justify-end'>

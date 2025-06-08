@@ -6,6 +6,8 @@ import GeneratingTokensIcon from '@mui/icons-material/GeneratingTokens';
 import YoutubePlayer from '../components/Youtube-player'
 import QuizIcon from '@mui/icons-material/Quiz';
 import DataUsageIcon from '@mui/icons-material/DataUsage';
+import StyleIcon from '@mui/icons-material/Style';
+import Flashcard from '../components/FlashCard';
 
 const PostPlayer = () => {
     const params=useParams()
@@ -38,7 +40,52 @@ const PostPlayer = () => {
 
     const handleSummary=async ()=>{
         await setTimeout(()=>{
-            setPostObj({...postObj,summary:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"})
+            setPostObj({...postObj,allFlashCards:JSON.parse(`{"_id": {
+                "$oid": "68281990f205a6681b850c1f"
+            },
+            "resourceId": "6827689d2944a255496a7c96",
+            "flashcards": [
+                {
+                "points": [
+                    "Ubuntu is a Linux distro.",
+                    "Based on Debian's architecture.",
+                    "User-friendly desktop environment."
+                ]
+                },
+                {
+                "points": [
+                    "Linux is an open-source OS.",
+                    "Kernel forms the core.",
+                    "Supports diverse hardware."
+                ]
+                },
+                {
+                "points": [
+                    "OS manages computer resources.",
+                    "Provides platform for apps.",
+                    "Interfaces with hardware."
+                ]
+                },
+                {
+                "points": [
+                    "Ubuntu uses APT package manager.",
+                    "Easy software installation/updates.",
+                    "Large software repository."
+                ]
+                },
+                {
+                "points": [
+                    "Command line interface (CLI).",
+                    "Powerful for advanced users.",
+                    "Automation and scripting."
+                ]
+                }
+            ],
+            "createdAt": {
+                "$date": "2025-05-17T05:07:28.867Z"
+            },
+            "_class": "com.final_year_project.AI_service.model.Flashcard"
+            }`)})
             updateLoading(false);
         },
         2000);
@@ -69,20 +116,20 @@ const PostPlayer = () => {
                     updateGen(true)
                     handleSummary()
                     }}>
-                    <GeneratingTokensIcon/>
-                    <p>Generate summary</p>
+                    <StyleIcon/>
+                    <p>Generate Flashcards</p>
                 </button>
                 <button className='flex gap-2 px-4 py-2 bg-black rounded-full text-[#d4be81] border-3 border-[#d4be81] hover:cursor-pointer hover:border-black hover:bg-[#d4be81] hover:text-black duration-300'>
                     <QuizIcon/>
                     <p>Take Quiz</p>
                 </button>
         </div>
-        <div className={`flex flex-col justify-center transition-opacity ease-in-out bg-black rounded-2xl text-[#d4be81] px-5 py-3 border-3 mt-5 mx-4 duration-400 ${gen?"opacity-100":" opacity-0 h-[1px]"}`}> 
-            <h1 className='text-3xl font-mono font-bold mb-2'>Summary</h1>
+        <div className={`flex flex-col justify-center transition-opacity ease-in-out bg-black rounded-2xl text-[#d4be81] px-5 py-3 border-3 mt-5 mx-4 duration-400 ${gen?"opacity-100":" opacity-0 h-[1px]"}`}>
+            <h1 className='text-3xl font-mono font-bold mb-2'>Flashcards</h1>
             <hr className='mb-2'/>
-            <div className={`w-full ${gen?"opacity-100":"hidden"}`}>
+            <div className={`w-full mt-2 ${gen?"opacity-100":"hidden"}`}>
                 {
-                    loading?<LoadDiv/>:<p className='transition-opacity ease-in-out duration-400 '>{postObj.summary}</p>
+                    loading?<LoadDiv/>:<div className='flex justify-between items-center mx-3 gap-2 max-sm:flex-col pb-4'>{postObj.allFlashCards.flashcards.map((elem,id)=><Flashcard key={id} front={id+1} back={elem.points}/>)}</div>
                 }
             </div>
         </div>  

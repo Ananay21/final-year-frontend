@@ -5,3 +5,53 @@ html{
     background-image: url("./assets/bg.jpg");
 }
 
+.card {
+    background-color: black;
+    border: #d4be81;
+    border-style: solid;
+    border-width: medium;
+    border-radius: .5rem;
+    padding-left: 3px;
+    box-shadow:  0 0 5px 2px rgba(0, 0, 0 , .3);
+    height: 200px;
+    width: 250px;
+    transform: perspective(1000px)rotateY(var(--rotate-y, 0));
+    transition: 150ms;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+
+.card.flip {
+    --rotate-y: 180deg;
+}
+
+.card:hover {
+    box-shadow:  0 0 5px 2px rgba(0,0,0,.5);
+    --translate-y: -2px;
+    border-color:black;
+    background-color:#d4be81;
+    color:black;
+    scale: 110%;
+}
+
+
+.card .front, 
+.card .back {
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+.card .front {
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    padding-left:15px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    padding-left: 30px;
+}

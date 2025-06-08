@@ -4,11 +4,10 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import QuizIcon from '@mui/icons-material/Quiz';
-import StyleIcon from '@mui/icons-material/Style';
 
 const Header = (props) => {
   const [menu,changeMenu]=useState(false)
-  const linksArray=[{link:"/allposts",route:"All posts",icon:<DynamicFeedIcon/>},{link:"/quiz",route:"Take quiz",icon:<QuizIcon/>},{link:"/flashcards",route:"Flash Cards",icon:<StyleIcon/>},{link:"/user",route:"Profile",icon:<AccountCircleIcon/>}]
+  const linksArray=[{link:"/allposts",route:"All posts",icon:<DynamicFeedIcon/>},{link:"/quiz",route:"Take quiz",icon:<QuizIcon/>},{link:"/user",route:"Profile",icon:<AccountCircleIcon/>}]
   
   const handleClick=()=>{
     changeMenu(!menu)
