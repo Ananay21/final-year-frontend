@@ -40,7 +40,7 @@ const AllPosts = () => {
     <div className='w-full h-screen mt-20'>
       <Header searchHeader={true}/>
       <div className='flex flex-wrap justify-center'>
-        {postsArray.map((elem,index)=><UserPost key={index} id={elem.id} tags={elem.tags} title={elem.title} desc={elem.description} type={elem.type} userName={elem.userName}/>)}
+        {postsArray.map((elem,index)=><UserPost key={index} id={elem.id} tags={elem.tags} title={elem.title} desc={elem.description} type={elem.type} />)}
       </div>
       <AddPostButton/>
       <Footer/>

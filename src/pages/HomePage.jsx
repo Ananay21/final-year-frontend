@@ -110,39 +110,34 @@ const HomePage = () => {
   return (
     <>
     <Header/>
-    <div className='mt-22 mb-5 mx-4 flex flex-col text-[#d4be81]'>
-        <div className='bg-black px-10 py-7 rounded-xl max-sm:py-10 max-sm:px-4 shadow-sm shadow-white'>
-            <h1 className='font-bold font-mono text-4xl mb-2'>{TopTags[index].tag}</h1>
-            <p className=' text-2xl'>{TopTags[index].line}</p>
-        </div>
-    </div>
-    <div className='mb-5 mx-4 flex flex-col text-[#d4be81]'>
-        <div className='bg-black px-10 py-7 rounded-xl max-sm:py-10 max-sm:px-4 shadow-sm shadow-white'>
-            <div className='flex font-mono font-bold text-4xl mb-4'>
-                <h1>{"Learn Together. "} </h1>
-                <h1 className='max-lg:hidden'> Grow Together. Share Together.</h1>
-            </div>
-            <Carousel data={postsArray} type="post"/>
+      <div className='mt-22 mb-5 mx-4 flex flex-col text-[#d4be81]'>
+          <div className='bg-black px-10 py-7 rounded-xl max-sm:py-10 max-sm:px-4 shadow-sm shadow-white'>
+              <h1 className='font-bold font-mono text-4xl mb-2'>{TopTags[index].tag}</h1>
+              <p className=' text-2xl'>{TopTags[index].line}</p>
           </div>
         </div>
-      <div>
-    </div>
-    <div className='mb-5 mx-4 flex flex-col text-[#d4be81]'>
-        <div className='bg-black px-10 py-7 rounded-xl max-sm:py-10 max-sm:px-4 shadow-sm shadow-white'>
-            <div className='flex font-mono font-bold text-4xl mb-4'>
-                <h1>{"Reinforce Your Understanding. "} </h1>
-                <h1 className='max-lg:hidden'> One Question at a Time.</h1>
+        <div className='mb-5 mx-4 flex flex-col text-[#d4be81]'>
+            <div className='bg-black px-10 py-7 rounded-xl max-sm:py-10 max-sm:px-4 shadow-sm shadow-white'>
+                <div className='flex font-mono font-bold text-4xl mb-4'>
+                    <h1>{"Learn Together. "} </h1>
+                    <h1 className='max-lg:hidden'> Grow Together. Share Together.</h1>
+                </div>
+                <Carousel data={postsArray} type="post"/>
+              </div>
             </div>
-            <Carousel data={quizArray} type="quiz"/>
+          <div>
         </div>
+        <div className='mb-5 mx-4 flex flex-col text-[#d4be81]'>
+            <div className='bg-black px-10 py-7 rounded-xl max-sm:py-10 max-sm:px-4 shadow-sm shadow-white'>
+                <div className='flex font-mono font-bold text-4xl mb-4'>
+                    <h1>{"Reinforce Your Understanding. "} </h1>
+                    <h1 className='max-lg:hidden'> One Question at a Time.</h1>
+                </div>
+                <Carousel data={quizArray} type="quiz"/>
+            </div>
+          </div>
+        <div>
       </div>
-    <div>
-
-    </div>
-    {/* Master Concepts. Memorize with Ease. FlashCards */}
-    <div>
-
-    </div>
     <Footer/>
     </>
   )

@@ -49,9 +49,6 @@ const UserPost = (props) => {
             <p>{updatedDesc}</p>
         </div>
         <div className='flex flex-row h-full pl-3 my-2 max-lg:text-sm'>
-            <div className='flex flex-nowrap'>
-              @{props.userName}
-            </div>
             <div className='flex flex-row gap-2 justify-end items-center w-full'>
               <button className={`rounded-full text-black flex items-center p-[3px] duration-300 ${likeDislike.like ? "text-white bg-black":""}`} onClick={()=>handleClick("like")}>
                 <ArrowCircleUpIcon className='hover:cursor-pointer'/>
